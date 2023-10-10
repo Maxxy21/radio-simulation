@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
+        Radio meinRadio = new Radio();
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+        meinRadio.turnOn();
+        meinRadio.increaseVolume();
+        meinRadio.setFrequency(95.5);
+        meinRadio.decreaseVolume();
+        meinRadio.turnOff();
     }
 }
