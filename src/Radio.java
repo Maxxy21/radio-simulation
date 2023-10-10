@@ -8,9 +8,9 @@ public class Radio {
 
     private static final int MAX_VOLUME = 100;
     private static final int MIN_VOLUME = 0;
-    private static final double MIN_FREQUENCY_FM = 88.0;
+    private static final double MIN_FREQUENCY_FM = 88.0; // FM-Frequenzbereich: 88 MHz bis 108 MHz
     private static final double MAX_FREQUENCY_FM = 108.0;
-    private static final double MIN_FREQUENCY_AM = 530.0;
+    private static final double MIN_FREQUENCY_AM = 530.0; // AM-Frequenzbereich: 530 kHz bis 1700 kHz
     private static final double MAX_FREQUENCY_AM = 1700.0;
 
 
@@ -38,6 +38,10 @@ public class Radio {
     }
 
 
+    /**
+     * Stellt sicher, dass das Radio eingeschaltet ist.
+     * Wenn das Radio ausgeschaltet ist, wird eine entsprechende Nachricht angezeigt.
+     */
     private void ensureRadioIsOn() {
         if (!isOn) {
             System.out.println("Operation nicht möglich, Radio ist AUS");
