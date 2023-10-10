@@ -20,6 +20,10 @@ public class Radio {
     private boolean isMuted;
     private Mode currentMode;
 
+
+    /**
+     * Enum, das die beiden Modi des Radios darstellt: AM und FM.
+     */
     private enum Mode {
         AM, FM
     }
@@ -191,7 +195,7 @@ public class Radio {
      * Gibt den aktuellen Status des Radios aus.
      */
     public void displayStatus() {
-        System.out.println("Radio-Status: " + (isOn ? "AN" : "AUS"));
+        System.out.println("Radio-Status: " + (isOn ? "EIN" : "AUS"));
         System.out.println("Modus: " + currentMode);
         System.out.println("Lautstärke: " + volume);
         System.out.println("Gedämpft: " + (isMuted ? "Ja" : "Nein"));
